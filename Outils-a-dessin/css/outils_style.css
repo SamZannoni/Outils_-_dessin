@@ -1,0 +1,523 @@
+@font-face {
+    font-family: 'NarrowBold';
+    src: url('InputMonoNarrow-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowBoldItal';
+    src: url('InputMonoNarrow-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowThin';
+    src: url('InputMonoNarrow-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowRegular';
+    src: url('InputMonoNarrow-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowExtraLight';
+    src: url('InputMonoNarrow-ExtraLight.ttf');
+}
+
+html,
+body {
+    margin: 0;
+}
+
+.liens {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: underline;
+}
+
+#Infos {
+    width: 311px;
+    height: 0px;
+    margin: 2vw;
+    position: absolute;
+    overflow: hidden;
+    transition: ease 500ms all;
+    top: 50px;
+    background-color: black;
+    color: white;
+    font-family: 'NarrowRegular';
+    z-index: 20;
+}
+
+#Infos:hover {
+    border-radius: 20px;
+}
+
+#Titre_Article {
+    margin-left: 2vw;
+    width: 100%;
+    height: auto;
+    font-family: 'NarrowRegular';
+    z-index: 100;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    position: fixed;
+    z-index: 0;
+}
+
+#Article {
+    top: 110px;
+    position: relative;
+    font-family: 'NarrowRegular';
+    transition: all ease 500ms;
+    height: 100%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#Canvas {
+    position: relative;
+    border: solid black 1px;
+    z-index: 0;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ContainerCanvas {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    /* top: 25vh; */
+}
+
+#ContainerOutils {
+    width: auto;
+    height: 600px;
+    position: fixed;
+    margin-right: 2vw;
+    right: 0;
+    top: 110px;
+    transition: all ease 500ms;
+    /* padding-right: 50px; */
+}
+
+#ContainerOutils2 {
+    width: 170px;
+    /* border: black 1px solid; */
+    height: 600px;
+    position: fixed;
+    margin-right: 2vw;
+    right: 160px;
+    top: 110px;
+    transition: all ease 500ms;
+    /* padding-right: 50px; */
+    /* background: white; */
+}
+
+.Onglets {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    /* margin: 3vh; */
+    /* line-height: 50px; */
+    text-align: center;
+    color: black;
+    border: solid black 1px;
+    transition: all ease 500ms;
+    background-color: white;
+}
+
+#ContainerOnglets {
+    float: left;
+    position: fixed;
+    margin: 2vw;
+    width: auto;
+    top: 135px;
+    left: 0;
+    transition: all ease 500ms;
+    z-index: 2;
+}
+
+#Quezako {
+    position: fixed;
+    opacity: 1;
+    /* float: left; */
+    margin-right: auto;
+    width: fit-content;
+    transition: all ease 500ms;
+    border: solid 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: 'NarrowRegular';
+    margin: 2vw;
+    top: -3px;
+    left: 145px;
+}
+
+#ContainerCodeSource {
+    width: 30vw;
+    position: fixed;
+    left: 70vw;
+    top: 21vh;
+}
+
+
+/* Code */
+
+#AfficheurCode {
+    margin: 0vh 2vh 0vh 2vh;
+    height: 0vh;
+    overflow: scroll;
+    width: 26vw;
+    border: black solid 0px;
+    background-color: white;
+    /* left: 70vw; */
+    cursor: pointer;
+    /* position: fixed; */
+    resize: both;
+    transition: all ease 500ms;
+}
+
+#TitreAfficheurCode {
+    margin: 0vh 2vh 0vh 2vh;
+    cursor: pointer;
+    color: blue;
+}
+
+#CodeSource {
+    font-size: 11px;
+    max-width: 20px;
+}
+
+#Gomme {
+    right: 0;
+    width: 140px;
+    top: 0vh;
+    height: 80px;
+    border: solid black 1px;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    /* float: right; */
+}
+
+#Petit {
+    width: 15px;
+    height: 15px;
+    border: solid black 1px;
+    float: right;
+    margin: 1vh;
+}
+
+#Moyen {
+    width: 25px;
+    height: 25px;
+    border: solid black 1px;
+    float: right;
+    margin: 1vh;
+}
+
+#Gros {
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    float: right;
+    margin: 1vh;
+}
+
+
+/* Clavier */
+
+#ContainerClavier {
+    width: 140px;
+    padding: 10px;
+    height: 104px;
+    position: relative;
+    border: solid 1px black;
+    overflow: hidden;
+    right: 0px;
+    /* float: right; */
+}
+
+.touches {
+    border: solid 1px black;
+    width: 18px;
+    padding: 11px;
+    float: left;
+    font-size: 21px;
+}
+
+
+/* Couleur en cours */
+
+#Palette {
+    width: 140px;
+    height: auto;
+    border: solid black 1px;
+    position: relative;
+    /* margin: 1vh; */
+    padding: 10px;
+    /* right: 0vw; */
+    /* bottom: 0vh; */
+    /* float: right; */
+    overflow: hidden;
+}
+
+#CouleurEnCours {
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    float: right;
+    margin: 1vh;
+    margin-right: auto;
+}
+
+#DllImg {
+    opacity: 1;
+    float: right;
+    border: solid 1px;
+    position: fixed;
+    transition: all ease 500ms;
+    padding: 5px;
+    cursor: pointer;
+    top: 68px;
+    right: 2vw;
+}
+
+#DllImg:hover {
+    border-radius: 30px;
+}
+
+#printImg {
+    opacity: 1;
+    float: right;
+    border: solid 1px;
+    position: fixed;
+    transition: all ease 500ms;
+    padding: 5px;
+    cursor: pointer;
+    top: 68px;
+    right: 0;
+    margin-right: 10vw;
+}
+
+#imgCanvas {
+    display: none;
+}
+
+.slider {
+    -webkit-appearance: none;
+    border-radius: 55px;
+    position: relative;
+    z-index: 20;
+    background-color: white;
+    border: solid 1px black;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#ContainerSlider {
+    width: 140px;
+    padding: 10px;
+    position: relative;
+    border: solid 1px black;
+}
+
+#NomSlider {
+    text-align: center;
+}
+
+#ContainerColor {
+    width: 140px;
+    padding: 10px;
+    border: solid 1px black;
+    height: 75px;
+}
+
+#ContainerBackCanvas {
+    width: 140px;
+    padding: 10px;
+    border: solid 1px black;
+    height: 75px;
+    background-color: white;
+}
+
+#nameColor {
+    float: left;
+    margin-top: 9px;
+    width: 63px;
+}
+
+#nameColorBack {
+    width: 75px;
+}
+
+#boutonColor {
+    border: solid black 1px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin: 0px;
+    margin-top: 9px;
+}
+
+#boutonColorBack {
+    border: solid black 1px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin: 0px;
+}
+
+#HideTools {
+    font-family: 'NarrowRegular';
+    border: solid black 1px;
+    right: 0px;
+    position: fixed;
+    top: 0px;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    transition: all 500ms ease;
+    cursor: pointer;
+    z-index: 20;
+    padding: 5px;
+}
+
+#HideTools:hover {
+    border-radius: 20px;
+}
+
+#ContainerTailleCanvas {
+    width: 146px;
+    padding: 10px;
+    border: solid 1px black;
+    height: 195px;
+    background-color: white;
+}
+
+#LargeurCanvas {}
+
+#widthCanvas {
+    width: 75px;
+}
+
+#boutonLargeur {
+    border: solid black 1px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin: 0px;
+}
+
+#HauteurCanvas {
+    margin-top: 20px;
+}
+
+#heightCanvas {
+    width: 75px;
+}
+
+#boutonHauteur {
+    border: solid black 1px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin: 0px;
+}
+
+#TailleA4 {
+    border: solid black 1px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* float: right; */
+    margin-top: 5px;
+    /* margin: 0px; */
+}
+
+.boutons {
+    transition: all ease 500ms;
+    cursor: pointer;
+}
+
+.boutons:hover {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+
+.nonPrint {
+    display: block;
+}
+
+#ContainerSonore {
+    width: 146px;
+    padding: 10px;
+    border: solid 1px black;
+    height: 195px;
+    background-color: white;
+}
+
+#Info1 {
+    display: none;
+}
+
+#AudioRecord {
+    display: none;
+    width: 130px;
+}
+
+#btnStart {
+    cursor: pointer;
+    border: solid black 1px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin: 0px;
+    margin-top: 9px;
+}
+
+#btnStop {
+    cursor: pointer;
+    border: solid black 1px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin: 0px;
+    margin-top: 9px;
+}
+
+#audioPlay {
+    width: 140px;
+}
+
+.TitreFonctionPrint {
+    margin-left: 2vw;
+    width: 100%;
+    height: auto;
+    float: left;
+    font-family: 'NarrowRegular';
+    z-index: 100;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    position: fixed;
+    z-index: 0;
+    display: none;
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'NarrowBold';
+    src: url('InputMonoNarrow-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowBoldItal';
+    src: url('InputMonoNarrow-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowThin';
+    src: url('InputMonoNarrow-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowRegular';
+    src: url('InputMonoNarrow-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'NarrowExtraLight';
+    src: url('InputMonoNarrow-ExtraLight.ttf');
+}

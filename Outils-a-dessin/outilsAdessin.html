@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BrowserShop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css/font-face.css" />
+    <link rel="stylesheet" href="css/outils_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/outils_impression.css" media="print">
+    <script src="js/script_outils.js">
+    </script>
+</head>
+
+<body>
+    <div id="LesNomsDesFonctions">
+    </div>
+
+    <div id="Titre_Article" class="nonPrint">
+        Boîte à outils
+    </div>
+    <div id="Quezako" class="boutons nonPrint"> ? </div>
+
+    <div class="nonPrint" id="Infos"> <a class="liens" href="index.html" target="_blank">1.Quezako?</a>
+        <a class="liens" href="" target="_blank">2.Télécharger sur GitHub</a> </div>
+
+    <div class="boutons nonPrint" id="HideTools">
+        ✕ Cacher les outils
+    </div>
+
+    <div id="Article">
+        <div class="nonPrint" id="ContainerOnglets">
+            <div class="Onglets boutons">Le clavier agit sur les formes();</div>
+            <div class="Onglets boutons">Formes aléatoires();</div>
+            <div class="Onglets boutons">Pixels qui grossissent();</div>
+            <div class="Onglets boutons">Pinceau rond();</div>
+            <div class="Onglets boutons">Pinceau carre();</div>
+            <div class="Onglets boutons">Formes sonores();</div>
+        </div>
+        <a id="DllImg" class="boutons nonPrint">Save Image</a>
+        <a id="printImg" class="boutons nonPrint">✉Print</a>
+
+
+        <div id="ContainerCanvas">
+            <canvas id="Canvas"></canvas>
+
+        </div>
+        <div class="nonPrint" id="ContainerOutils2">
+            <!-- InputSizeCanvas -->
+            <div class="nonPrint" id="ContainerTailleCanvas">
+                <div id="LargeurCanvas">Écrire ici la largeur du canvas</div>
+                <input type="text" id="widthCanvas" name="width" placeholder="Largeur" size="15">
+                <div id="boutonLargeur" class="boutons">ok</div>
+                <div id="HauteurCanvas">Écrire ici la hauteur du canvas</div>
+                <input type="text" id="heightCanvas" name="height" placeholder="Hauteur" size="15">
+                <div id="boutonHauteur" class="boutons">ok</div>
+                <div id="TailleA4" class="boutons">A4</div>
+            </div>
+            <div class="nonPrint" id="ContainerBackCanvas">
+                <div id="LargeurCanvas">Écrire ici la couleur d'arrière plan</div>
+                <input type="text" id="nameColorBack" name="colorBack" placeholder="couleur" size="15">
+                <div id="boutonColorBack" class="boutons nonPrint">ok</div>
+            </div>
+
+            <!-- AUdio buttons -->
+            <div class="nonPrint" id="ContainerSonore">
+                <div id="Info1"> /!\ Retour sonore </div>
+                <audio id="AudioRecord" controls></audio>
+                <button id="btnStart">Start</button>
+                <button id="btnStop">Stop</button>
+                <div id="Info2"> Rejouer l'enregistrement</div>
+                <audio id="audioPlay" controls></audio>
+            </div>
+        </div>
+
+        <div class="nonPrint" id="ContainerOutils">
+            <div id="Gomme"> Gomme <br>
+                <div id="Petit"></div>
+                <div id="Moyen"></div>
+                <div id="Gros"></div>
+            </div>
+
+
+            <!-- Simulation clavier -->
+            <div class="nonPrint" id="ContainerClavier">
+                <div class="touches" id="a">a</div>
+                <div class="touches" id="b">b</div>
+                <div class="touches" id="c">c</div>
+                <div class="touches" id="d">d</div>
+                <div class="touches" id="e">e</div>
+                <div class="touches" id="f">f</div>
+            </div>
+
+            <!-- Couleur en cours -->
+            <div class="nonPrint" id="Palette">
+                <div id="CouleurEnCours"></div>
+                <p id="NomCouleur"></p>
+            </div>
+
+            <!-- Range slider -->
+            <div class="nonPrint" id="ContainerSlider">
+                <div class="nonPrint" id="NomSlider">Épaisseur du pinceau</div>
+                <input class="nonPrint" type="range" min="1" max="200" value="20" class="slider" id="LeSlide">
+            </div>
+
+            <!-- Color picker but input -->
+            <div class="nonPrint" id="ContainerColor">
+                <div class="nonPrint" id="TexteCouleur">Écrire ici une couleur</div>
+                <input class="nonPrint" type="text" id="nameColor" name="color" placeholder="couleur en anglais" size="15">
+                <div id="boutonColor" class="boutons nonPrint">ok</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <img id="imgCanvas">
+
+
+
+
+</body>
+
+
+
+</html>
